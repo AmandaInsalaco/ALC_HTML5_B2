@@ -23,7 +23,7 @@ a) The protagonist is captured.
 b) The protagonist is killed.
 c) The protagonist acquires treasure.
 d) The protagonist finds love.
-e) The protagonist fails in his/her quest.
+e) The protagonist fails in there quest.
 
 */
 
@@ -37,6 +37,41 @@ function Game() {
     alert("Welcome " + playerName + " to the Land of Riddles, where the stakes are high, but the treasure great!");
     alert("You are in your late great-uncle's musty library. When you look around, you see a very unusual book on a pedestool. The title says, Land of Riddles. When you open it up, you suddenly fall into the book!");
     alert("As you gain your bearing, you see that you are in an idetical library, but with no books. A scrap of paper falls from the ceiling. You pick it up. It says: \n The Land of Riddles is is full of riddles. Solve them all to reap the reward and return to earth. Watch your step, watch your mouth");
+    
+    Library();
+    
+    function Library(){
+        var library = prompt("... \n walk around \n go through door \n climb to second floor").toLowerCase();
+        
+        switch(library){
+            case "walk around":
+                alert("...");
+                var libraryWalkAround = confirm("do you want to pick up the book?");
+                if(libraryWalkAround){
+                    inventory.book ++;
+                //displays books owned
+                alert("you added "+inventory.sword+ " book");
+                Library();
+                }
+                else{
+                    alert("you missed out!");
+                    Library();
+                }
+            break;
+            case "go through door":
+            break;
+            case "climb to second floor":
+                alert(".....");
+                Library();
+            break;
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     Prison();
     
@@ -71,6 +106,9 @@ function Game() {
             alert("Way to guess it!");
             var PrisonZombies;
         }
+        else if(prison == "swamp"){
+            Swamp();
+        }
         else{
             alert("I don't know what "+prison+" is!");
             Prison();
@@ -79,7 +117,7 @@ function Game() {
     
     function Swamp(){
         
-        var swamp1 = prompt("You enter a dank sawmp.  \n swim \n go on swamp path").toLowerCase;
+        var swamp1 = prompt("You enter a dank sawmp.  \n swim \n go on swamp path \n buy sword").toLowerCase;
         
         if(swamp1 == "swim" || swamp1 == "go swimming"){
             alert("You get eaten by a swamp monster..... Game Over!");
@@ -94,6 +132,21 @@ function Game() {
                 alert("You go north");
             }
         }
+        //example of inventory
+        else if(swamp1 == "buy sword" && inventory.coins >= 100){
+            var swordbuy = confirm("Are you sure you want to buy this sowrd?");
+            if(swordbuy){
+                //addds sword +1
+                inventory.sword ++;
+                //displays sowrds owned
+                alert("you won "+inventory.sword+ " swords");
+                //inventory.coins = inventory.coins - 100;
+                inventory.coins -= 100;
+                //displays coins left in account
+                alert("You have "+inventory.coins+" coins remaining");
+                Swamp();
+            }
+        }
         else{
             alert("I don't understand "+swamp1);
             Swamp();
@@ -103,6 +156,35 @@ function Game() {
     function PrisonZombies(){
         var prisonZombies = prompt("You look up to find that you are now alone in the cell, and a weird noise is coming from outside the cell. Suddenly, around the corner, comes a hord of zombies!! ");
     }
-    
+   //example of switch
+    //no break = keeps on playing the cases beneath, but not the above cases
+    function Castle(){
+        var insideCastle = prompt("-upstairs \n -downstairs \n -courtyard \n -balcony \n -look around").toLowerCase();
+        
+        //inside the parenthese the parameter is the varable that the switch is checking
+        switch(insideCastle){
+            //initalize the case, peramater, colon, what it does, break
+            case "upstairs": 
+                var upstairs = prompt("information about the upstairs");
+                Castle();
+            break;
+            case "downstairs":
+                alert("you go downstairs");
+            break;
+            case "courtyard":
+                alert("you go to the courtyard");
+                Castle();
+            break;
+            case "balcony":
+                alert("you go to the balcony");
+                Castle();
+            break;
+            default:
+                alert("I don't know what "+insideCastle+" is!");
+                insideCastle();
+
+            break;
+               }
+    }
     
 }
