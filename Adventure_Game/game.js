@@ -1,7 +1,8 @@
 //document.write("Hello World!");
 //document.write("<h1>Everything is AWESOME!</h1>");
 //single line comment
-/*
+/*NOTES
+
     alert box, will pop up with okay button
     alert("Warning! Will Robinson...Warning!");
     confirmation box will be okay button or cancel button
@@ -31,23 +32,82 @@ Game();
 
 function Game() {
     
+            //Javascript object for an inventory
+            var inventory = {
+                coins: 1000,
+                bread: 0,
+                sword: 0,
+                map: 0,
+                keys: 1,
+                book: 0,
+            }
+            //Array
+            var monsterNames = [
+                "Dul the Orc", 
+                "Demon Dritak", 
+                "Erebos the Banshee", 
+                "Nightfeather Owl", 
+                "Sionia the Siren", 
+                "Vrumier the Basilisk"
+            ];
+    
+    //how you call an array
+    //alert(monsterNames[0]+" comes at you!");
+    
     alert("Land of Riddles");
+   
     //var = container
     var playerName = prompt("What is your name?");
-    alert("Welcome " + playerName + " to the Land of Riddles, where the stakes are high, but the treasure great!");
+    alert("Welcome " + playerName + " to the Land of Riddles!");
     alert("You are in your late great-uncle's musty library. When you look around, you see a very unusual book on a pedestool. The title says, Land of Riddles. When you open it up, you suddenly fall into the book!");
     alert("As you gain your bearing, you see that you are in an idetical library, but with no books. A scrap of paper falls from the ceiling. You pick it up. It says: \n The Land of Riddles is is full of riddles. Solve them all to reap the reward and return to earth. Watch your step, watch your mouth");
     
     Library();
     
     function Library(){
-        var library = prompt("... \n walk around \n go through door \n climb to second floor").toLowerCase();
-        
-        switch(library){
-            case "walk around":
-                alert("...");
-                var libraryWalkAround = confirm("do you want to pick up the book?");
-                if(libraryWalkAround){
+        var library = prompt("prompt 1... \n -go upstairs \n -look around \n -open door").toLowerCase();
+        if(library = "go upstairs"){
+            LibraryGoUpstairs();
+        }
+        else if(library = "look around"){
+            LibraryLookArond();
+        }
+        else if(library = "open door"){
+            ForestPath();
+        }
+        function LibraryGoUpstairs(){
+            var libraryGoUpstairs = prompt("prompt 2... \n -try door \n -go downstairs").toLowerCase();
+                if(libraryGoUpstairs = "try door" /*&& inventory.keys = 0*/){
+                    alert("You need four keys to open the door.");
+                    LibraryGoUpstairs();
+                }
+                else if(libraryGoUpstairs = "try door" /*&& inventory.keys = 4*/){
+                    alert("You open the door and step out.....");
+                }
+                else if(libraryGoUpstairs = "go downstairs"){
+                    alert("You walk back down the stairs without ever discovering what was upstairs.");
+                    Library();
+                }
+                else{
+                    alert("I don't know what "+libraryGoUpstairs+ " is!");
+                    LibraryGoUpstairs();
+                }
+            }
+        function LibraryLookArond(){
+            var libraryLookAround = prompt("prompt 5... \n -go upstairs \n -open door \n -pick up book");
+                if(libraryLookAround = "go upstairs"){
+                    alert("...you go upstairs");
+                    LibraryGoUpstairs();
+                }
+                else if(libraryLookAround = "open door"){
+                    alert("...open door");
+                    ForestPath();
+                }
+                else if(libraryLookAround = " pick up book"){
+                    alert("In order to pick up book answer this riddle:");
+                }
+            }
+                /*
                     inventory.book ++;
                 //displays books owned
                 alert("you added "+inventory.sword+ " book");
@@ -57,22 +117,25 @@ function Game() {
                     alert("you missed out!");
                     Library();
                 }
+            }
             break;
-            case "go through door":
+            case "look around":
             break;
-            case "climb to second floor":
+            case "open door":
                 alert(".....");
                 Library();
             break;
+                */
         }
+    }                     
+    function ForestPath(){
+        
     }
     
     
     
     
-    
-    
-    
+    /*
     Prison();
     
     function Prison(){
@@ -188,3 +251,4 @@ function Game() {
     }
     
 }
+*/
