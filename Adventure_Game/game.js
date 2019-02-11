@@ -24,14 +24,14 @@ a) The protagonist is captured.
 b) The protagonist is killed.
 c) The protagonist acquires treasure.
 d) The protagonist finds love.
-e) The protagonist fails in there quest.
+e) The protagonist fails in their quest.
 
 */
 
 Game();
 
 function Game() {
-    
+
             //Javascript object for an inventory
             var inventory = {
                 coins: 1000,
@@ -41,7 +41,7 @@ function Game() {
                 keys: 1,
                 book: 0,
             }
-            //Array
+            //Monster Names Array
             var monsterNames = [
                 "Dul the Orc", 
                 "Demon Dritak", 
@@ -70,43 +70,44 @@ function Game() {
             LibraryGoUpstairs();
         }
         else if(library = "look around"){
-            LibraryLookArond();
+            LibraryLookAround();
         }
         else if(library = "open door"){
             ForestPath();
         }
-        function LibraryGoUpstairs(){
-            var libraryGoUpstairs = prompt("prompt 2... \n -try door \n -go downstairs").toLowerCase();
-                if(libraryGoUpstairs = "try door" /*&& inventory.keys = 0*/){
-                    alert("You need four keys to open the door.");
-                    LibraryGoUpstairs();
-                }
-                else if(libraryGoUpstairs = "try door" /*&& inventory.keys = 4*/){
-                    alert("You open the door and step out.....");
-                }
-                else if(libraryGoUpstairs = "go downstairs"){
-                    alert("You walk back down the stairs without ever discovering what was upstairs.");
-                    Library();
-                }
-                else{
-                    alert("I don't know what "+libraryGoUpstairs+ " is!");
-                    LibraryGoUpstairs();
-                }
+    
+    function LibraryGoUpstairs(){
+        var libraryGoUpstairs = prompt("prompt 2... \n -try door \n -go downstairs").toLowerCase();
+            if(libraryGoUpstairs = "try door" /*&& inventory.keys = 0*/){
+                alert("You need four keys to open the door.");
+                LibraryGoUpstairs();
             }
-        function LibraryLookArond(){
-            var libraryLookAround = prompt("prompt 5... \n -go upstairs \n -open door \n -pick up book");
-                if(libraryLookAround = "go upstairs"){
-                    alert("...you go upstairs");
-                    LibraryGoUpstairs();
-                }
-                else if(libraryLookAround = "open door"){
-                    alert("...open door");
-                    ForestPath();
-                }
-                else if(libraryLookAround = " pick up book"){
-                    alert("In order to pick up book answer this riddle:");
-                }
+            //else if(libraryGoUpstairs = "try door" /*&& inventory.keys = 4*/){
+                //alert("You open the door and step out.....");
+            //}
+            else if(libraryGoUpstairs = "go downstairs"){
+                alert("You walk back down the stairs without ever discovering what was upstairs.");
+                 Library();
             }
+            else{
+                alert("I don't know what "+libraryGoUpstairs+" is!");
+                LibraryGoUpstairs();
+            }
+    }
+    function LibraryLookAround(){
+        var libraryLookAround = prompt("prompt 5... \n -go upstairs \n -open door \n -pick up book");
+            if(libraryLookAround = "go upstairs"){
+                alert("...you go upstairs");
+                LibraryGoUpstairs();
+            }
+            else if(libraryLookAround = "open door"){
+                alert("...open door");
+                ForestPath();
+            }
+            else if(libraryLookAround = "pick up book"){
+                alert("In order to pick up book answer this riddle:");
+            }
+    }
                 /*
                     inventory.book ++;
                 //displays books owned
@@ -126,14 +127,80 @@ function Game() {
                 Library();
             break;
                 */
-        }
-    }                     
+    }
     function ForestPath(){
+        var forestPath = prompt("...prompt 7 \n -go through mist \n follow path \n forge path");
+            if(forestPath = "go through mist"){
+                MystIsland();
+            }
+            else if(forestPath = "follow path"){
+                DallingtonForest();
+            }
+            else if(forestPath = "forge path"){
+                SilentHill();
+            }
+            else{
+                alert("I don't know what "+forestPath+" is!");
+                ForestPath();
+            }
+        }
+    function MystIsland(){
+        var edgeOfWater = prompt(" prompt 27... \n -look around \n -swim across \n -go back");
+        switch (edgeOfWater){
+            case "look around":
+                var waterLookAround = prompt(" prompt 28... \n -use boat \n - go back");
+                if(waterLookAround = "use boat"){
+                    alert("answer this riddle to use the boat");
+                    var waterLookAroundRiddle = prompt("What becomes wetter the more it dries?");
+                    while (waterLookAroundRiddle !=="towell"){
+                        alert("That's not the answer");
+                    }
+                    aler("That's right!");
+                    MystIslandIsland();
+                }
+                else if(waterLookAround = "go back"){
+                    MystIsland();
+                }
+        }
+        //MystIslandIsland(){
+            
+        //}
+    }
+    function CalterburryCitadel(){
         
     }
+    function SilentHill(){
+        
+    }
+    function DallgintonForest(){
+        alert("prompt 8... with monster jumping out");
+        var dallingtonForestDul = prompt("choose what to do \n fight Dul \n talk to Dul").toLowerCase();
+        if(dallingtonForestDul = "fight dul"){
+            alert("You die!");
+            Library();
+        }
+        else if(dallingtonForestDul = "talk to dul"){
+            DallingtonForestDulRiddle();
+        }
+        else{
+            alert("I don't know what "+dallingtonForestDul+" is!");
+            DallgintonForest();
+        }
+        function DallingtonForestDulRiddle(){
+            var dulRiddle = prompt("I am not alive, yet I grow; I have no lungs, yet I need air; I have no mouth, yet I can drown. What am I? \n write your answer in the box \n or write 'hint' to recieve a hint");
+            while(dulRiddle !== "fire"){
+                alert("That's not the answer!");
+                prompt("I am not alive, yet I grow; I have no lungs, yet I need air; I have no mouth, yet I can drown. What am I?");
+            }
+            alert("You guessed it! Here is a key.");
+            alert("One key added to inventory.");
+            ForestPath();
+        }
+    }
     
+}//end game bracket
     
-    
+
     
     /*
     Prison();
