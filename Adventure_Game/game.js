@@ -66,26 +66,26 @@ function Game() {
     
     function Library(){
         var library = prompt("prompt 1... \n -go upstairs \n -look around \n -open door").toLowerCase();
-        if(library = "go upstairs"){
+        if(library == "go upstairs"){
             LibraryGoUpstairs();
         }
-        else if(library = "look around"){
+        else if(library == "look around"){
             LibraryLookAround();
         }
-        else if(library = "open door"){
+        else if(library == "open door"){
             ForestPath();
         }
     
     function LibraryGoUpstairs(){
         var libraryGoUpstairs = prompt("prompt 2... \n -try door \n -go downstairs").toLowerCase();
-            if(libraryGoUpstairs = "try door" /*&& inventory.keys = 0*/){
+            if(libraryGoUpstairs == "try door" /*&& inventory.keys = 0*/){
                 alert("You need four keys to open the door.");
                 LibraryGoUpstairs();
             }
             //else if(libraryGoUpstairs = "try door" /*&& inventory.keys = 4*/){
                 //alert("You open the door and step out.....");
             //}
-            else if(libraryGoUpstairs = "go downstairs"){
+            else if(libraryGoUpstairs == "go downstairs"){
                 alert("You walk back down the stairs without ever discovering what was upstairs.");
                  Library();
             }
@@ -95,18 +95,34 @@ function Game() {
             }
     }
     function LibraryLookAround(){
-        var libraryLookAround = prompt("prompt 5... \n -go upstairs \n -open door \n -pick up book");
-            if(libraryLookAround = "go upstairs"){
+        var libraryLookAround = prompt("prompt 5... \n -go upstairs \n -open door \n -pick up book \n -pick up sword");
+            if(libraryLookAround == "go upstairs"){
                 alert("...you go upstairs");
                 LibraryGoUpstairs();
             }
-            else if(libraryLookAround = "open door"){
+            else if(libraryLookAround == "open door"){
                 alert("...open door");
                 ForestPath();
             }
-            else if(libraryLookAround = "pick up book"){
-                alert("In order to pick up book answer this riddle:");
+            else if(libraryLookAround == "pick up sword"){
+                alert("One sword is added to inventory");
+                inventory.sword ++;
+                LibraryLookAround();
             }
+            else if(libraryLookAround == "pick up book"){
+                alert("In order to pick up book answer this riddle:");
+                var libraryBookRiddle = prompt("If you have me, you want to share me. If you share me, I no longer exist. What am I?").toLowerCase();
+                let i = 5;
+                while(i > 0 && libraryBookRiddle !== "secrets" || "secret" || "a secret"){
+                        alert("That's not the answer! Only "+i+" chances left!");
+                        var libraryBookRiddle = prompt("If you have me, you want to share me. If you share me, I no longer exist. What am I?");
+                    i--
+                }
+                alert("Anser: A Secret. That's right. \n Book of Hints added to inventory");
+                inventory.book ++;
+                LibraryLookAround();
+            }
+    }
     }
                 /*
                     inventory.book ++;
@@ -127,16 +143,16 @@ function Game() {
                 Library();
             break;
                 */
-    }
+    
     function ForestPath(){
         var forestPath = prompt("...prompt 7 \n -go through mist \n follow path \n forge path");
-            if(forestPath = "go through mist"){
+            if(forestPath == "go through mist"){
                 MystIsland();
             }
-            else if(forestPath = "follow path"){
+            else if(forestPath == "follow path"){
                 DallingtonForest();
             }
-            else if(forestPath = "forge path"){
+            else if(forestPath == "forge path"){
                 SilentHill();
             }
             else{
@@ -149,7 +165,7 @@ function Game() {
         switch (edgeOfWater){
             case "look around":
                 var waterLookAround = prompt(" prompt 28... \n -use boat \n - go back");
-                if(waterLookAround = "use boat"){
+                if(waterLookAround == "use boat"){
                     alert("answer this riddle to use the boat");
                     var waterLookAroundRiddle = prompt("What becomes wetter the more it dries?");
                     while (waterLookAroundRiddle !=="towell"){
@@ -158,7 +174,7 @@ function Game() {
                     aler("That's right!");
                     MystIslandIsland();
                 }
-                else if(waterLookAround = "go back"){
+                else if(waterLookAround == "go back"){
                     MystIsland();
                 }
         }
@@ -172,14 +188,14 @@ function Game() {
     function SilentHill(){
         
     }
-    function DallgintonForest(){
+    function DallingtonForest(){
         alert("prompt 8... with monster jumping out");
         var dallingtonForestDul = prompt("choose what to do \n fight Dul \n talk to Dul").toLowerCase();
-        if(dallingtonForestDul = "fight dul"){
+        if(dallingtonForestDul == "fight dul"){
             alert("You die!");
             Library();
         }
-        else if(dallingtonForestDul = "talk to dul"){
+        else if(dallingtonForestDul == "talk to dul"){
             DallingtonForestDulRiddle();
         }
         else{
@@ -197,7 +213,7 @@ function Game() {
             ForestPath();
         }
     }
-    
+
 }//end game bracket
     
 
