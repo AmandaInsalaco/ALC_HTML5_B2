@@ -112,15 +112,45 @@ function Game() {
             else if(libraryLookAround == "pick up book"){
                 alert("In order to pick up book answer this riddle:");
                 var libraryBookRiddle = prompt("If you have me, you want to share me. If you share me, I no longer exist. What am I?").toLowerCase();
-                let i = 5;
-                while(i > 0 && libraryBookRiddle !== "secrets" || "secret" || "a secret"){
-                        alert("That's not the answer! Only "+i+" chances left!");
+           
+                /* This one does work!!!!
+                
+                
+            //inside the parenthese the parameter is the varable that the switch is checking
+            switch(libraryBookRiddle){
+            //initalize the case, peramater, colon, what it does, break
+            case "secret": 
+                alert("Answer: A Secret. That's right. \n\nBook of Hints added to inventory");
+                inventory.book ++;
+                LibraryLookAround();
+            break;
+            case "a secret":
+                alert("Answer: A Secret. That's right. \n\nBook of Hints added to inventory");
+                inventory.book ++;
+                LibraryLookAround();
+            break;
+            case "secrets":
+                alert("Answer: A Secret. That's right. \n\nBook of Hints added to inventory");
+                inventory.book ++;
+                LibraryLookAround();
+            break;
+            default:
+                alert("That's not the right answer!!!");
+                LibraryLookAround();
+            break;
+               }
+                */
+                
+                let chances = 5;
+                while(chances > 0 && libraryBookRiddle !== "secrets" /*|| "secret" || "a secret"*/){
+                        alert("That's not the answer! Only "+chances+" chances left!");
                         var libraryBookRiddle = prompt("If you have me, you want to share me. If you share me, I no longer exist. What am I?");
-                    i--
+                    chances--;
                 }
                 alert("Anser: A Secret. That's right. \n Book of Hints added to inventory");
                 inventory.book ++;
                 LibraryLookAround();
+                
             }
     }
     }
@@ -186,14 +216,20 @@ function Game() {
         
     }
     function SilentHill(){
-        
+        var silentHillLookAround = prompt("...")
     }
     function DallingtonForest(){
         alert("prompt 8... with monster jumping out");
         var dallingtonForestDul = prompt("choose what to do \n fight Dul \n talk to Dul").toLowerCase();
         if(dallingtonForestDul == "fight dul"){
-            alert("You die!");
-            Library();
+            if(inventory.sword = 1){
+                alert("You fight and win and gain one key");
+                ForestPath();
+            }
+            else{
+                alert("You die!");
+                Library();
+            }
         }
         else if(dallingtonForestDul == "talk to dul"){
             DallingtonForestDulRiddle();
@@ -204,13 +240,25 @@ function Game() {
         }
         function DallingtonForestDulRiddle(){
             var dulRiddle = prompt("I am not alive, yet I grow; I have no lungs, yet I need air; I have no mouth, yet I can drown. What am I? \n write your answer in the box \n or write 'hint' to recieve a hint");
-            while(dulRiddle !== "fire"){
-                alert("That's not the answer!");
-                prompt("I am not alive, yet I grow; I have no lungs, yet I need air; I have no mouth, yet I can drown. What am I?");
+            if(dulRiddle == "hint" && inventory.book >= 1){
+                alert("You're in a forest! What burns down forests?")
+                DallingtonForestDulRiddle();
             }
-            alert("You guessed it! Here is a key.");
-            alert("One key added to inventory.");
-            ForestPath();
+            else if(dulRiddle == "hint" && inventory.book !== 1){
+                alert("You do not have the book of hints");
+                DallingtonForestDulRiddle();
+            }
+            else{
+            let chances = 5;
+                while(chances > 0 && dulRiddle !== "fire"){
+                        alert("That's not the answer! Only "+chances+" chances left!");
+                        var libraryBookRiddle = prompt("I am not alive, yet I grow; I have no lungs, yet I need air; I have no mouth, yet I can drown. What am I? \n write your answer in the box \n or write 'hint' to recieve a hint");
+                    chances--;
+                }
+                alert("Anser: A fire. That's right. \n1 key added to inventory");
+                inventory.keys ++;
+                ForestPath();
+            }
         }
     }
 
