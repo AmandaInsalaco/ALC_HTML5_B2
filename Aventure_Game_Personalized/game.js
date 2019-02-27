@@ -26,6 +26,19 @@ d) The protagonist finds love.
 e) The protagonist fails in their quest.
 */
 
+
+var simpleAlert=document.querySelector(".simple-alert");
+simpleAlert.addEventListener("click", function(e)){
+                             e.preventDefault();
+injectTemplate(getBannerTemplate());
+var btnClose = document.querySelector(".banner-close");
+btnClose.addEventListener("click",function(closeEvt)){
+                          var banner = document.querySelector(".banner");
+banner.parentNode.removechild(banner);
+                          }
+                             }
+
+
 Game();
 
 function Game() {
@@ -55,8 +68,7 @@ function Game() {
     
     alert("Land of Riddles");
     //var = container
-    //with prompt boxes, the second "" will appear in the prompt area
-    var playerName = prompt("What is your name?", "Example: inigo montoya");
+    var playerName = prompt("What is your name?");
     //loops through till the PC decides on a name
     while(!confirm("Are you sure you want "+playerName+" as your name?")){
         playerName = prompt("What name do you want?");
