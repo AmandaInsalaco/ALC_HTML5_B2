@@ -1,0 +1,29 @@
+body{
+    
+}
+h2{
+    color: aqua;
+    text-align: center;
+    font-family: cursive;
+    font-size: 100px;
+}
+p{
+    font-family: cursive;
+    font-size: 20px;
+    color: coral;
+    text-align: center;
+}
+button{
+    align-content: center;
+    align-self: center;
+    font-size: 50px;
+    font-family: cursive;
+    background-color: white;
+    color: coral;
+    padding: inherit;
+    border-bottom-color: aqua;
+    border-bottom-width: thick;
+    border-right-color: aqua;
+    border-right-width: thick;
+    border-radius: 50%;
+}
