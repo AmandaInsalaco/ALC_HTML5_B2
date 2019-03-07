@@ -5,18 +5,46 @@
 </head>
 <body>
 
-<h2>Ice Cream Scoops</h2>
+<h2 id="h2Ice">Ice Cream Scoops</h2>
+<script>
+    document.getElementById("h2Ice").style.color = "aqua";
+</script>
+    
+<div class="ShopOwner">
+<p id="p1">Hello World</p>
+<script>
+    document.getElementById("p1").innerHTML = "Shop Owner:";
+</script>
+    
+<p id="p2">Amanda Insalaco</p>
+<script>
+    document.getElementById("p2").style.color = "darkgrey";
+    document.getElementById("p2").style.fontFamily = "Fantasy";
+    document.getElementById("p2").style.fontSize = "25px";
+</script>
+</div>
     
 <p>One Scoop ice-cream cones selling for 1 click!</p>
     
 <button onclick="document.getElementById('iceCreamCone').src='icecream_cone.jpg'">eat ice cream</button>
 
-<img id="iceCreamCone" src="icecream_cone.jpg" style="width:100px">
+<img id="iceCreamCone" src="icecream_cone.jpg" style="width:200px" style="height: 300px">
 
 <button onclick="document.getElementById('iceCreamCone').src='icecreamscoop.jpg'">scoop ice cream</button>
 
 <p id="demo">Good Morning</p>
-<script>document.getElementById("demo").innerHTML = "One scoop ice cream cones selling for 1 click!";</script>
+<script>
+    document.getElementById("demo").innerHTML = "Thanks for Coming!";
+    document.getElementById("demo").style.fontSize = "20px";
+</script>
+    
+<p id="p3">Thanks!</p>
+<script>
+    document.getElementById("p3").innerHTML = "Made in B2 HTML5";
+    document.getElementById("p3").style.color = "darkgrey";
+    document.getElementById("p3").style.fontFamily = "Fantasy";
+    document.getElementById("p3").style.fontSize = "10px";
+</script>
     
 </body>
 </html>
