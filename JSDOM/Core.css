@@ -43,10 +43,18 @@ button{
     align-self: center;
     align-content: center;
     padding-bottom: 20px;
+    width: 60%;
+    margin: auto;
 }
 img{
     margin: auto;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:40%;
 }
 .iceCreamImg{
     width: 100%;
+    margin: auto;
 }
