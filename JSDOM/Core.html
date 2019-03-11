@@ -14,11 +14,12 @@
 <p id="p1">Hello World</p>
 <script>
     document.getElementById("p1").innerHTML = "Shop Owner:";
+    document.getElementById("p1").style.color = "white";
 </script>
     
 <p id="p2">Amanda Insalaco</p>
 <script>
-    document.getElementById("p2").style.color = "darkgrey";
+    document.getElementById("p2").style.color = "white";
     document.getElementById("p2").style.fontFamily = "Fantasy";
     document.getElementById("p2").style.fontSize = "25px";
 </script>
@@ -27,9 +28,9 @@
 <p>One Scoop ice-cream cones selling for 1 click!</p>
     
 <button onclick="document.getElementById('iceCreamCone').src='icecream_cone.jpg'">eat ice cream</button>
-
+<div class="iceCreamImg">
 <img id="iceCreamCone" src="icecream_cone.jpg" style="width:200px" style="height: 300px">
-
+</div>
 <button onclick="document.getElementById('iceCreamCone').src='icecreamscoop.jpg'">scoop ice cream</button>
 
 <p id="demo">Good Morning</p>
