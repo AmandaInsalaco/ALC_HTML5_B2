@@ -19,13 +19,18 @@
     <div class="container">
     
         <h1 class="center-align">My Contacts</h1>
+        
+        <!-->text input field to search<-->
         <input type="text" id="filterInput" placeholder="Search names...">
         
+        <!-->ul is unordered list, no numbers by numbers<-->
         <ul id="names" class="collection with-header">
+            <!-->li is the list item<-->
             <li class="collection-header">
                 <h5>A</h5>
             </li>
             <li class="collection-item">
+                <!-->href is the link, # links it back to that page<-->
                 <a href="#">Adam</a>
             </li>
             <li class="collection-item">
@@ -38,7 +43,7 @@
                 <a href="#">Allie</a>
             </li>
             <li class="collection-item">
-                <a href="#">Anthony</a>
+                <a href="nebo.edu">Anthony</a>
             </li>
             <li class="collection-item">
                 <a href="#">Amanda</a>
@@ -201,5 +206,47 @@
     
     </div>
     
+    <script>
+        // Get input element
+        let filterInput = document.getElementById('filterInput');
+        // Add event listener
+        filterInput.addEventListener('keyup', filterNames);
+        function filterNames(){
+          // Get value of input
+          let filterValue = document.getElementById('filterInput').value.toUpperCase();
+          // Get names ul
+          let ul = document.getElementById('names');
+          // Get lis from ul
+            //querySelectorAll is a methad that calls all items with class=collection-item
+          let li = ul.querySelectorAll('li.collection-item');
+          let header = ul.querySelectorAll('li.collection-header');
+          // Loop through collection-item lis
+          for(let i = 0;i < li.length;i++){
+            //a refers to the tag up above
+            let a = li[i].getElementsByTagName('a')[0];
+            // If matched
+            if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+              li[i].style.display = '';
+            } else {
+              li[i].style.display = 'none';
+            }
+          }
+        }
+        /*
+          //I want this to loop through headers and show or hide them
+          for (let i = 0; i < li.length; i++){
+              //h5 is the header tag
+              let h5 = header[i].getElementsByTagName('h5')[0];
+              if(h5.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                  header[i].style.display = '';
+              }
+              else{
+                  header[i].style.display = 'none';
+              }
+          }
+        }
+        */
+      </script>
+     
 </body>
 </html>
