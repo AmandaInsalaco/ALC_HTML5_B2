@@ -5,8 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style type="text/css">
             /*selector, e.g. body or h1 followed by brackets, in the brackets are attributes/properities*/
+            /*palette 1
+            #2e86ab blue
+            #a23b72 magenta
+            #f18f01 orange
+            #c73e1d red
+            #3b1f2b black
+            */ 
+            /*
+            #44355b
+            #31263e
+            #21e22
+            #3ca72c
+            #ee5622
+            */
             body{
-                background-color: orange;
+                background-color: #f18f01;
                 margin: 0;
             }
             h1{
@@ -16,31 +30,230 @@
                 */
                 text-align: center;
                 color: white;
+                /*first one is the one that will show, the second one will show if the computer does not have the other font*/
                 font-family: Ordeal Eroded, sans-serif, "arial";
                 /*percentage, like 100% would set the font-size to 12 point font*/
                 font-size: 100px;
-                font-weight: 100;
+                font-weight: bold;
                 margin-bottom: 10px;
                 margin-left: 5px;
                 /*position on x and y, then how blurry, than a color*/
                 text-shadow: 2px 2px 2px dimgray;
             }
             h3{
-                position: absolute;
+                text-align: center;
+                /*
                 top: 200px;
                 left: 200px;
-                color: dimgray;
+                */
+                color: #3b1f2b;
                 font-family: Very Damaged, "arial";
                 font-size: 25px;
                 /* four types of margins*//*top, right, bottom, left */
                 margin: 0 0 0 5px;
                 
             }
+            div#square1{
+                background-color: #2e86ab;
+                width: 100px;
+                height: 100px;
+                border: inset, 10px, #a23b72;
+                /*position:absolute;
+                left: 500px;
+                top: 500px;
+                */
+                display: block;
+                margin: auto;
+                box-shadow: 2px 2px 2px #102d39;
+            }
+            div#circle1{
+                background-color: #a23b72;
+                width: 110px;
+                height: 110px;
+                border-radius: 100%;
+                display: block;
+                margin: auto;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+            }
+            div#square2{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: linear-gradient(to right, #2e86ab, #a23b72);
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                position: absolute;
+            }
+            div#square3{
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to right, #a23b72, #2e86ab);
+                position: absolute;
+                left: 101px;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                border-radius: 5%;
+            }
+            div#square4{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: linear-gradient(to right, #2e86ab, #a23b72);
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                position: absolute;
+                left: 202px;
+                border-radius: 10%;
+            }
+            div#square5{
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to right, #a23b72, #2e86ab);
+                position: absolute;
+                left: 303px;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                border-radius: 15%;
+            }
+            div#square6{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: linear-gradient(to right, #2e86ab, #a23b72);
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                position: absolute;
+                left: 404px;
+                border-radius: 20%;
+            }
+            div#square7{
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to right, #a23b72, #2e86ab);
+                position: absolute;
+                left: 505px;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                border-radius: 25%;
+            }
+            div#square8{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: linear-gradient(to right, #2e86ab, #a23b72);
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                position: absolute;
+                left: 606px;
+                border-radius: 35%;
+            }
+            div#square9{
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to right, #a23b72, #2e86ab);
+                position: absolute;
+                left: 707px;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                border-radius: 40%;
+            }
+            div#square10{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: linear-gradient(to right, #2e86ab, #a23b72);
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                position: absolute;
+                left: 808px;
+                border-radius: 45%;
+            }
+            div#square11{
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to right, #a23b72, #2e86ab);
+                position: absolute;
+                left: 909px;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                border-radius: 50%;
+            }
+            div#square12{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: linear-gradient(to right, #2e86ab, #a23b72);
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                position: absolute;
+                left: 1010px;
+                border-radius: 55%;
+            }
+            div#square13{
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to right, #a23b72, #2e86ab);
+                position: absolute;
+                left: 1111px;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                border-radius: 60%;
+            }
+            div#square14{
+                width: 100px;
+                height: 100px;
+                background-color: white;
+                background-image: linear-gradient(to right, #2e86ab, #a23b72);
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                position: absolute;
+                left: 1212px;
+                border-radius: 65%;
+            }
+            div#square15{
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(to right, #a23b72, #2e86ab);
+                position: absolute;
+                left: 1313px;
+                box-shadow: 2px 2px 2px rgb(101, 35, 70);
+                border-radius: 70%;
+            }
+            div#space{
+                width: 20px;
+                height: 20px;
+            }
+            div#triangle{
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 80px 80px 80px;
+                border-color: transparent transparent #3b1f2b transparent;
+                display: block;
+                margin: auto;
+                animation-name: triangle;
+                animation-duration: 4s;
+            }
+            @keyframes triangle{
+                0%   {background-color: #2e86ab;}
+                25%  {background-color: #a23b72;}
+                50%  {background-color: #f18f01;}
+                100% {background-color: #c73e1d;}
+            }
+
         
         </style>
     </head>
     <body>
         <h1>CSS Exercises</h1>
         <h3>Vol.1.1</h3>
+        <div id="space"></div>
+        <div id="square1"></div>
+        <div id="circle1"></div>
+        <div id="triangle"></div>
+        <div id="space"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
+        <div id="square6"></div>
+        <div id="square7"></div>
+        <div id="square8"></div>
+        <div id="square9"></div>
+        <div id="square10"></div>
+        <div id="square11"></div>
+        <div id="square12"></div>
+        <div id="square13"></div>
+        <div id="square14"></div>
+        <div id="square15"></div>
+        <div id="space"></div>
+        <div id="square16"></div>
     </body>
 </html>
