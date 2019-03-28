@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="title">Canvas Exercises</h1>
+        <style>
+            h1{
+                color: orange;
+                text-align: center;
+            }
+        </style>
+        <canvas id="myCanvas" width="1000" height="1000" style="border: 5px solid orange;">
+        </canvas>
+        
+        <script>
+            //gets canvas from id above
+            var canvas = document.getElementById("myCanvas");
+            // ctx is short for context
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "orange";
+            //ctx.fillStyle = grd;
+            //x,y,width, hieght
+            ctx.fillRect(250,250,500,500);
+            //moveTo defines the starting point of the line
+            ctx.moveTo(250,250);
+            //lineTo defines teh ending point of the line
+            ctx.lineTo(500,5);
+            //have to ink it by stroke
+            ctx.stroke();
+            //Line2
+            ctx.moveTo(500,5);
+            ctx.lineTo(750,250);
+            ctx.stroke();
+            //line3
+            ctx.moveTo(300,200);
+            ctx.lineTo(300,80);
+            ctx.stroke();
+            //line4
+            ctx.moveTo(300,80);
+            ctx.lineTo(370,80);
+            ctx.stroke();
+            //line5
+            ctx.moveTo(370,80);
+            ctx.lineTo(370,135);
+            ctx.stroke();
+            //begins the path
+            ctx.beginPath();
+            //x,y,r,startangel,endangle, creats an arc/curv
+            //2*Math.PI is full circle, .5*Math.PI is half circle .25*Math.PI is 1/4 circle
+            ctx.arc(400,400, 40,0,2*Math.PI);
+            ctx.stroke();
+            //circle2
+            ctx.beginPath();
+            ctx.arc(600,400,40,0,2*Math.PI);
+            ctx.stroke();
+            //creates linear gradient
+            var grd = ctx.createLinearGradient(0,750,1000,0);
+            grd.addColorStop(0,"#12af12");
+            grd.addColorStop(1,"white");
+            //leftfence
+            ctx.fillStyle = grd;
+            ctx.fillRect(5,750,1000,500);
+            //creates radial gradient
+            //x,y,r,x1,y1,r1
+            var grdr = ctx.createRadialGradient(100,100,1,100,60,100);
+            grdr.addColorStop(0, "yellow");
+            grdr.addColorStop(1, "white");
+            //fill gradient
+            ctx.fillStyle = grdr;
+            ctx.fillRect(50,50,150,80);
+            //creates sun
+            ctx.beginPath();
+            ctx.arc(120,90,40,0,2*Math.PI);
+            ctx.stroke();
+            //sunlines
+            ctx.moveTo(115,50);
+            ctx.lineTo(115,20);
+            ctx.stroke();
+            //sunline2
+            ctx.moveTo(115,130);
+            ctx.lineTo(115,150);
+            ctx.stroke();
+        </script>
+        
+    </body>
+</html>
