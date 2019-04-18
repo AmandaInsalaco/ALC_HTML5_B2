@@ -1,0 +1,73 @@
+/*Stylesheet for Mobile App*/
+
+/*Reset*/
+html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,il,header,footer,nav{
+    margin:0;
+    padding:0;
+}
+
+/*universal style*/
+body{
+    background-color: #ffcc6e;
+    padding: 25px;
+}
+div#container{
+    width: device-width;
+    height:800px;
+    background-color: white;
+}
+header{
+    background-color: #63b7ff;
+    /*percentages like 100% or px*/
+    width:device-width-25px;
+    /*content, padding, border, margin*/
+    padding: 25px;
+}
+header h1{
+    color: white;
+    /*-family: "Hobo Std", "sans-serif";*/
+    font-family: 'Itim', cursive;
+    /*em, px, %*/
+    font-size: 3em;
+    /*position on x and y, then how blurry, than a color*/
+    text-shadow: 2px 2px 2px dimgray;
+    text-align: center;
+}
+div#content{
+    width: 100%;
+    background-color: #97cfff;
+    border: 2px, dimgray;
+    font-family: 'Itim', 'cursive';
+    text-align: center;
+}
+div p{
+    font-family: "sans-serif";
+}
+div h3{
+    font-family: 'Itim', cursive;
+    /*em, px, %*/
+    font-size: 2em;
+    color: dimgray;
+    /*position on x and y, then how blurry, than a color*/
+    text-shadow: 1px 1px 1px white;
+    text-align: center;
+}
+nav{
+    width: 100%;
+}
+nav ul{
+    display: block;
+    margin: auto;
+    font-family: 'Itim', cursive;
+    padding: 5px 10px;
+    list-style: none;
+}
+nav ul li{
+    float: left;
+    padding: 5px 15px;
+    color: #63b7ff;
+    text-align: center;
+}
+.keepopen{
+    clear: both;
+}
