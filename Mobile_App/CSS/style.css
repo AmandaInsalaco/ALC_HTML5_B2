@@ -13,7 +13,7 @@ body{
 }
 div#container{
     width: device-width;
-    height:800px;
+    /*height:800px;*/
     background-color: white;
 }
 header{
@@ -38,7 +38,7 @@ div#content{
     background-color: #97cfff;
     border: 2px, dimgray;
     font-family: 'Itim', 'cursive';
-    text-align: center;
+    /*text-align: center;*/
 }
 div p{
     font-family: "sans-serif";
@@ -51,23 +51,60 @@ div h3{
     /*position on x and y, then how blurry, than a color*/
     text-shadow: 1px 1px 1px white;
     text-align: center;
+    padding: 10px;
 }
-nav{
-    width: 100%;
-}
-nav ul{
-    display: block;
-    margin: auto;
-    font-family: 'Itim', cursive;
-    padding: 5px 10px;
-    list-style: none;
-}
-nav ul li{
-    float: left;
-    padding: 5px 15px;
-    color: #63b7ff;
+div img{
     text-align: center;
 }
-.keepopen{
+nav{
+    background-color: #97cfff;
+    color: white;
+    font-family: 'Itim', cursive;
+    font-size: 1em;
+    text-align: center;
+    /*width: 100%;*/
+    border: 2px solid white;
+}
+nav ul{
+    list-style:none;
+    /*display: block;*/
+    
+}
+nav ul li a{
+    /*background-color: #97cfff;*/
+    color:white;
+    /*text-align: center;*/
+    text-decoration: none;
+    float:left;
+    display: block;
+    padding: 5px 10px;
+    /*border-right: 2px solid #63b7ff;
+    border-bottom: 2px solid #63b7ff;*/
+}
+nav ul li a:hover{
+    background-color: white;
+    color: #ffcc6e;
+}
+div.keepopen{
     clear: both;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 50px;
+    background-color: #63b7ff;
+}
+/*media query to see if screen is bigger than 600 px, if it is, nonething is done, if it is not, than the navigation shrinks*/
+@media screen and (max-width: 600px){
+    div#container{
+        width:100%;
+    }
+    nav ul li a{
+        float: none;
+        text-align:center;
+        border-bottom: 2px solid #63b7ff;
+        border-right: none;
+    }
 }
