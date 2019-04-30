@@ -13,7 +13,7 @@ body{
 }
 div#container{
     width: device-width;
-    /*height:800px;*/
+    height:800px;
     background-color: white;
 }
 header{
@@ -22,6 +22,10 @@ header{
     width:device-width-25px;
     /*content, padding, border, margin*/
     padding: 25px;
+}
+header img#App_Logo{
+    display: block;
+    margin: auto;
 }
 header h1{
     color: white;
@@ -39,9 +43,22 @@ div#content{
     border: 2px, dimgray;
     font-family: 'Itim', 'cursive';
     /*text-align: center;*/
+    text-align: center;
+}
+div#content2{
+    width: 100%;
+    background-color: white;
+    border: 2px, dimgray;
+    font-family: 'Itim', 'cursive';
+    text-align: absolute;
+}
+h3#Hello{
+    color: #ffcc6e;
+    text-shadow: 1px 1px 1px dimgray;
 }
 div p{
-    font-family: "sans-serif";
+    font-family: 'Arial';
+    padding: 10px;
 }
 div h3{
     font-family: 'Itim', cursive;
@@ -50,41 +67,46 @@ div h3{
     color: dimgray;
     /*position on x and y, then how blurry, than a color*/
     text-shadow: 1px 1px 1px white;
-    text-align: center;
     padding: 10px;
 }
 div img{
     text-align: center;
 }
+div#AmandaInsalaco{
+    width: 50px;
+    height: 100px;
+}
+/*
 nav{
     background-color: #97cfff;
     color: white;
     font-family: 'Itim', cursive;
     font-size: 1em;
     text-align: center;
-    /*width: 100%;*/
+    *width: 100%;
     border: 2px solid white;
 }
 nav ul{
     list-style:none;
-    /*display: block;*/
+    *display: block;
     
 }
 nav ul li a{
-    /*background-color: #97cfff;*/
+    *background-color: #97cfff;
     color:white;
-    /*text-align: center;*/
+    text-align: center;
     text-decoration: none;
     float:left;
     display: block;
     padding: 5px 10px;
-    /*border-right: 2px solid #63b7ff;
-    border-bottom: 2px solid #63b7ff;*/
+    *border-right: 2px solid #63b7ff;
+    *border-bottom: 2px solid #63b7ff;
 }
 nav ul li a:hover{
     background-color: white;
     color: #ffcc6e;
 }
+
 div.keepopen{
     clear: both;
 }
@@ -96,7 +118,9 @@ footer{
     height: 50px;
     background-color: #63b7ff;
 }
-/*media query to see if screen is bigger than 600 px, if it is, nonething is done, if it is not, than the navigation shrinks*/
+*/
+/*
+*media query to see if screen is bigger than 600 px, if it is, nonething is done, if it is not, than the navigation shrinks
 @media screen and (max-width: 600px){
     div#container{
         width:100%;
@@ -107,4 +131,32 @@ footer{
         border-bottom: 2px solid #63b7ff;
         border-right: none;
     }
+}
+*/
+.icon-bar {
+    position:absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #97cfff;
+}
+
+.active {
+    background-color: #63b7ff;
 }
