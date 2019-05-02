@@ -1,5 +1,5 @@
 /*Stylesheet for Mobile App*/
-
+/*#63b7ff; blud*/
 /*Reset*/
 html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,il,header,footer,nav{
     margin:0;
@@ -17,15 +17,17 @@ div#container{
     background-color: white;
 }
 header{
-    background-color: #63b7ff;
+    background-color: white;
     /*percentages like 100% or px*/
     width:device-width-25px;
     /*content, padding, border, margin*/
     padding: 25px;
 }
-header img#App_Logo{
+img#Logo{
     display: block;
     margin: auto;
+    width: 200px;
+    height: 150px;
 }
 header h1{
     color: white;
@@ -37,6 +39,16 @@ header h1{
     text-shadow: 2px 2px 2px dimgray;
     text-align: center;
 }
+i#home{
+    padding: 5px;
+    color: #ffcc6e;
+    font-size: 24px;
+}
+i#Awards{
+    padding: 5px;
+    color: #ffcc6e;
+    font-size: 24px;
+}
 div#content{
     width: 100%;
     background-color: #97cfff;
@@ -46,6 +58,13 @@ div#content{
     text-align: center;
 }
 div#content2{
+    width: 100%;
+    background-color: white;
+    border: 2px, dimgray;
+    font-family: 'Itim', 'cursive';
+    text-align: absolute;
+}
+div#content3{
     width: 100%;
     background-color: white;
     border: 2px, dimgray;
@@ -67,14 +86,33 @@ div h3{
     color: dimgray;
     /*position on x and y, then how blurry, than a color*/
     text-shadow: 1px 1px 1px white;
-    padding: 10px;
+    padding: 5px;
 }
 div img{
     text-align: center;
 }
-div#AmandaInsalaco{
+img#AmandaInsalaco{
     width: 50px;
     height: 100px;
+}
+img#SpaceStation{
+    width: 200px;
+    height: 100px;
+}
+.Buttons{
+    background-color: #63b7ff;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+.Buttons:hover{
+    background-color:#ffcc6e;
+    
 }
 /*
 nav{
