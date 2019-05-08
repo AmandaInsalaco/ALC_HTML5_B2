@@ -14,7 +14,6 @@ body{
 
 div#container{
     width: device-width;
-    height:800px;
     background-color: white;
 }
 header{
@@ -122,6 +121,20 @@ div h3{
     text-shadow: 1px 1px 1px white;
     padding: 5px;
 }
+.ulh3{
+    width: 100%;
+    border: 2px, dimgray;
+    font-family: 'Itim', 'cursive';
+    /*text-align: center;*/
+    text-align: center;
+}
+ul{
+    font: 'Itim', 'cursive';
+    list-style-type: none;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Itim', 'cursive';
+}
 div img{
     text-align: center;
 }
@@ -199,8 +212,8 @@ footer{
 }
 */
 .icon-bar {
-    position:absolute;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     left: 0;
     width: 100%;
     background-color: #555;
