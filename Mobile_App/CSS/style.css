@@ -24,7 +24,7 @@ header{
     padding: 25px;
 }
 
-/*all images*/
+/*all images and videos*/
 img#Logo{
     display: block;
     margin: auto;
@@ -48,6 +48,60 @@ img#KSLBanner{
     height: 100px;
     padding: 10px;
     float: left;
+}
+img#pumkin{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+img#SpaceStation2{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+iframe#WormVideo{
+    width=300px;
+    height=200px;
+    display: block;
+    margin: auto;
+}
+iframe#CakeWalk{
+    width=300px;
+    height=200px;
+    display: block;
+    margin: auto; 
+}
+img#FruitStand{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+img#robot{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+img#bird{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+img#planet{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: block;
+    margin: auto;
 }
 
 header h1{
@@ -102,8 +156,18 @@ i#Contact{
     border: 2px, dimgray;
     font-family: 'Itim', 'cursive';
     text-align: absolute;
+    padding-bottom: 50px;
 }
-
+.h3Centered{
+    font-family: 'Itim', cursive;
+    /*em, px, %*/
+    font-size: 2em;
+    color: dimgray;
+    /*position on x and y, then how blurry, than a color*/
+    text-shadow: 1px 1px 1px white;
+    padding: 5px;
+    text-align: center;
+}
 h3#Hello{
     color: #ffcc6e;
     text-shadow: 1px 1px 1px dimgray;
@@ -132,7 +196,8 @@ ul{
     font: 'Itim', 'cursive';
     list-style-type: none;
     padding: 20px;
-    text-align: center;
+    padding-bottom: 50px;
+    /*text-align: center;*/
     font-family: 'Itim', 'cursive';
 }
 div img{
@@ -149,10 +214,15 @@ div img{
     padding: 5px;
     display: block;
     margin: auto;
+    text-decoration-style: none;
 }
 .Buttons:hover{
     background-color:#ffcc6e;
     
+}
+a{
+    color: white;
+    text-decoration-line: none;
 }
 /*
 nav{
