@@ -1,5 +1,6 @@
 /*Stylesheet for Mobile App*/
 /*#63b7ff; blud*/
+/*#ffcc6e orange*/
 /*Reset*/
 html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,il,header,footer,nav{
     margin:0;
@@ -32,33 +33,26 @@ img#Logo{
     height: 150px;
 }
 img#AmandaInsalaco{
-    max-width: 80%;
-    min-width: 40%;
-    max-height: 80%;
-    min-height: 40%;
+    height: 125px;
+    width: 100px;
     padding: 10px;
-    display: block;
-    margin: auto;
+    float: left;
 }
 img#SpaceStation{
-    max-width: 80%;
-    min-width: 40%;
-    max-height: 80%;
-    min-height: 40%;
+    height: 125px;
+    width: 200px;
     padding: 10px;
-    display: block;
-    margin: auto;
+    float: left;
 }
 img#KSLBanner{
-    max-width: 80%;
-    min-width: 40%;
-    max-height: 80%;
-    min-height: 40%;
+    height: 125px;
+    width: 200px;
     padding: 10px;
-    display: block;
-    margin: auto;
+    float: left;
 }
-img#pumkin{
+
+
+img#pumpkin2{
     max-width: 80%;
     min-width: 40%;
     max-height: 80%;
@@ -77,14 +71,20 @@ img#SpaceStation2{
     margin: auto;
 }
 iframe#WormVideo{
-    width=300px;
-    height=200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
+    padding: 10px;
     display: block;
     margin: auto;
 }
 iframe#CakeWalk{
-    width=300px;
-    height=200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
+    padding: 10px;
     display: block;
     margin: auto; 
 }
@@ -117,16 +117,7 @@ img#planet{
     margin: auto;
 }
 
-header h1{
-    color: white;
-    /*-family: "Hobo Std", "sans-serif";*/
-    font-family: 'Itim', cursive;
-    /*em, px, %*/
-    font-size: 3em;
-    /*position on x and y, then how blurry, than a color*/
-    text-shadow: 2px 2px 2px dimgray;
-    text-align: center;
-}
+
 
 /*all of the icons at the header*/
 i#home{
@@ -170,6 +161,16 @@ i#Contact{
     font-family: 'Itim', 'cursive';
     text-align: absolute;
     padding-bottom: 50px;
+}
+header h1{
+    color: white;
+    /*-family: "Hobo Std", "sans-serif";*/
+    font-family: 'Itim', cursive;
+    /*em, px, %*/
+    font-size: 3em;
+    /*position on x and y, then how blurry, than a color*/
+    text-shadow: 2px 2px 2px dimgray;
+    text-align: center;
 }
 .h3Centered{
     font-family: 'Itim', cursive;
@@ -275,7 +276,7 @@ a{
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .column {
     width: 50%;
   }
