@@ -32,33 +32,46 @@ img#Logo{
     height: 150px;
 }
 img#AmandaInsalaco{
-    width: 100px;
-    height: 125px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
-    float: left;
+    display: block;
+    margin: auto;
 }
 img#SpaceStation{
-    width: 200px;
-    height: 100px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
-    float: left;
+    display: block;
+    margin: auto;
 }
 img#KSLBanner{
-    width: 150px;
-    height: 100px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
-    float: left;
+    display: block;
+    margin: auto;
 }
 img#pumkin{
-    width: 300px;
-    height: 200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
     display: block;
     margin: auto;
 }
 img#SpaceStation2{
-    width: 300px;
-    height: 200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
     display: block;
     margin: auto;
@@ -224,6 +237,94 @@ a{
     color: white;
     text-decoration-line: none;
 }
+
+
+/* Center website */
+* {
+  box-sizing: border-box;
+}
+.main {
+  max-width: device-width;
+  min-width: 200px;
+  margin: auto;
+}
+.row {
+  margin: 8px-16px;
+}
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Portfolio Content*/
+.portfolio_content{
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*Portfolio Figure Stuff*/
+/*
+div#Portfolio_grp{
+    max-width: 80%;
+    min-width: 20%;
+    margin: auto;
+}
+figure.portfolio{
+    float: left;
+    margin: 10px;
+    min-width: 300px;
+    max-width: 30%;
+    background-color: white;
+    border-radius: 5%;
+}
+figure.portfolio img{
+    max-width: 80%;
+    min-width: 40%;
+    display: block;
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+}
+figure.portfolio iframe{
+    display: block;
+    padding: 10px 0;
+    width: 80%;
+    margin: auto;
+}
+figure.portfolio figcaption{
+    text-align: center;
+    font-family: 'Arial';
+    color: dimgrey;
+    font-size: 20px;
+    padding: 10px;
+}
+*/
 /*
 nav{
     background-color: #97cfff;
