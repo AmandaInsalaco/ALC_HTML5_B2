@@ -88,33 +88,43 @@ iframe#CakeWalk{
     display: block;
     margin: auto; 
 }
+
+
 img#FruitStand{
-    width: 300px;
-    height: 200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
     display: block;
     margin: auto;
 }
 img#robot{
-    width: 300px;
-    height: 200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
     display: block;
-    margin: auto;
+    margin: auto; 
 }
 img#bird{
-    width: 300px;
-    height: 200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
     display: block;
-    margin: auto;
+    margin: auto; 
 }
 img#planet{
-    width: 300px;
-    height: 200px;
+    max-width: 80%;
+    min-width: 40%;
+    max-height: 80%;
+    min-height: 40%;
     padding: 10px;
     display: block;
-    margin: auto;
+    margin: auto; 
 }
 
 
@@ -289,6 +299,42 @@ a{
   }
 }
 
+
+/*Contact Me*/
+@media screen and (max-width: 1200px) {
+	figure.product{
+		float:none;
+		margin:10px auto;
+		min-width:50%;
+		max-width:100%;
+		background-color: #63b7ff;
+		border-radius:5%;
+	}
+	figure.product figcaption{
+	text-align: center;
+	color:#63b7ff;
+	font-family: 'Itim', 'cursive';
+	font-size:12px;
+}
+
+	 legend, span, input, textarea {
+		display:block;
+		margin:auto;
+		text-align:center;
+		font-family: 'Itim', 'cursive';
+		color: "darkgrey";
+}
+}
+legend, span, input, textarea {
+		display:block;
+		margin:auto;
+		text-align:center;
+		font-family: 'Itim', 'cursive';
+		color: "darkgrey";
+}
+
+
+
 /*Portfolio Figure Stuff*/
 /*
 div#Portfolio_grp{
@@ -410,3 +456,79 @@ footer{
 .active {
     background-color: #63b7ff;
 }
+
+/*Modal*/
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 5px;
+  border: 1px solid #ffcc6e;
+  width: 80%; /* Could be more or less, depending on screen size */
+  font-family: 'Arial';
+  padding: 10px;
+}
+
+/* The Close Buttons */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+.close2 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+.close3 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+
+
+
+
+
